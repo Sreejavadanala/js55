@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Reverser</title>
+  <style>
+  body {
+      text-align: center;
+    }
+    .list-container {
+      text-align: center;
+      display: inline-block;
+    }
+    </style>
+</head>
+<body>
+<h1 style="text-decoration: underline; color:skyblue;">JAVASCRIPT TASK-5</h1>
+
+  <div class="list-container">
+  <h1>Enter a number:</h1>
+  
+  <form onsubmit="reverseNumber(event)">
+    <label for="inputNumber">Number:</label>
+    <input type="number" id="inputNumber" required>
+    <button type="submit">Reverse</button>
+  </form>
+  <br>
+  <br>
+  
+  <div id="result"></div>
+  
+  <script>
+    function reverseNumber(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var inputNumber = parseInt(document.getElementById('inputNumber').value);
+      var reversedNumber = parseFloat(inputNumber.toString().split('').reverse().join(''));
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'The reverse of the number is: ' + reversedNumber;
+    }
+  </script>
+  </div>
+</body>
+</html>
